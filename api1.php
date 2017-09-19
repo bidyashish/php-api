@@ -34,7 +34,7 @@ header("Content-type: text/json");
 				  // echo "sucessfully saved";
 
 			} else {
-				echo "Error: " . $sql . "<br>" . $conn->error;
+				echo json_encode(array( 'Error'=>'Database Error.'),true);				
 			}
 
 			$conn->close();
